@@ -28,7 +28,7 @@ const NewsView = () => {
 
 
   return (
-    <View style={styles.main}>
+    <ScrollView style={styles.main}>
       <Text style={styles.sectionHeader}>
         Kabar Terkini Gereja
       </Text>
@@ -43,7 +43,7 @@ const NewsView = () => {
             renderItem={({ item }) => (
               <TouchableOpacity
                 onPress={()=> navigation.navigate('DetailNews', {param: item})}
-                style={{ flexDirection: 'row', marginBottom: '5px', borderWidth: '2px', padding: '5px' }}
+                style={{ flexDirection: 'row', marginBottom: '5px', borderWidth: '2px', padding: '5px', marginTop:10 }}
               >
                 <Image
                   source={{ uri: item.thumbnailUrl }}
@@ -63,7 +63,7 @@ const NewsView = () => {
 
       }
 
-    </View>
+    </ScrollView>
   )
 }
 
