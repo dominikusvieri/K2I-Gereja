@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, ActivityIndicator, ScrollView, FlatList, Toucha
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import ItemCardNews from '../../components/HomeScreen/ItemCardNews'
-import {useNavigation} from '@react-navigation/native'
+import { useNavigation } from '@react-navigation/native'
 
 
 
@@ -11,7 +11,7 @@ const EventView = () => {
   const [newsData, setNewsData] = useState([])
   const [isLoading, setIsLoading] = useState(true)
   const navigation = useNavigation()
-  
+
 
   useEffect(() => {
     setIsLoading(true)
@@ -23,9 +23,6 @@ const EventView = () => {
   }, [])
 
   console.log(newsData)
-
-  
-
 
   return (
     <ScrollView style={styles.main}>
@@ -42,8 +39,8 @@ const EventView = () => {
             keyExtractor={item => item.id.toString()}
             renderItem={({ item }) => (
               <TouchableOpacity
-                onPress={()=> navigation.navigate('DetailEvent', {param: item})}
-                style={{ flexDirection: 'row', marginBottom: '5px', borderWidth: '2px', padding: '5px', marginTop: 10 }}
+                onPress={() => navigation.navigate('DetailEvent', { param: item })}
+                style={{ flexDirection: 'row', marginBottom: '5px', padding: '5px', marginTop: 10 }}
               >
                 <Image
                   source={{ uri: item.image }}
@@ -59,6 +56,17 @@ const EventView = () => {
                 </View>
               </TouchableOpacity>
             )}
+            ItemSeparatorComponent={() => {
+              return (
+                <View
+                  style={{
+                    height: 1,
+                    width: "100%",
+                    backgroundColor: "#000",
+                  }}
+                />
+              );
+            }}
           />
 
       }

@@ -1,6 +1,6 @@
 import { View, Text, TextInput, Button, TouchableOpacity, StyleSheet } from 'react-native'
 import React, { useContext, useState } from 'react'
-import {useNavigation} from '@react-navigation/native'
+import { useNavigation } from '@react-navigation/native'
 import { AuthContext } from '../../../context/AuthContext'
 
 const LoginScreen = () => {
@@ -12,7 +12,7 @@ const LoginScreen = () => {
     return (
         <View style={styles.container}>
             <View style={styles.wrapper}>
-            <Text>{context}</Text>
+                <Text>{context}</Text>
                 <TextInput
                     placeholder='Enter Email'
                     style={styles.input}
@@ -28,13 +28,13 @@ const LoginScreen = () => {
                     onChangeText={(text) => setPassword(text)}
                 />
 
-                <Button title='Login' onPress={() => navigation.navigate('BottomNavigation')}/>
+                <Button title='Login' onPress={() => navigation.navigate('BottomNavigation')} />
 
                 <View style={styles.registerStyle}>
                     <Text>
-                        Dont have an account? 
+                        Dont have an account?
                     </Text>
-                    <TouchableOpacity onPress={()=> navigation.navigate('Register')}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Register')}>
                         <Text style={styles.link}>
                             Register
                         </Text>
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: 'black',
         borderRadius: 5,
-        paddingHorizontal: 14,
+        paddingHorizontal: 20,
         paddingVertical: 10
     },
     link: {

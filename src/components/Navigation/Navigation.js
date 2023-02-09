@@ -9,6 +9,7 @@ import BottomNavigation from './BottomNavigation'
 import DetailNewsScreen from '../../screens/HomeScreen/DetailNewsScreen'
 import DetailEventScreen from '../../screens/HomeScreen/DetailEventScreen'
 
+
 const Stack = createNativeStackNavigator()
 
 const Navigation = () => {
@@ -18,8 +19,8 @@ const Navigation = () => {
             <Stack.Screen name='Login' component={LoginScreen} options={{headerShown: false}}/>
             <Stack.Screen name='Register' component={RegisterScreen} options={{headerShown: false}}/>
             <Stack.Screen name='BottomNavigation' component={BottomNavigation} options={{headerShown:false}}/>
-            <Stack.Screen name='DetailNews' component={DetailNewsScreen}/>
-            <Stack.Screen name='DetailEvent' component={DetailEventScreen}/>
+            <Stack.Screen name='DetailNews' component={DetailNewsScreen} options={{title:'Berita Terkini'}}/>
+            <Stack.Screen name='DetailEvent' component={DetailEventScreen} options={{title:'Event Terkini'}}/>
         </Stack.Navigator>
     </NavigationContainer>
   )
