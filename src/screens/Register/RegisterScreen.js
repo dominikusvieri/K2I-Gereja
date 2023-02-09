@@ -58,7 +58,8 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: 'black',
         borderRadius: 5,
-        paddingHorizontal: 14
+        paddingHorizontal: 20,
+        paddingVertical: 10
     },
     link: {
         color: 'blue'

@@ -51,8 +51,6 @@ const HomeScreen = () => {
           />
         )}
       />
-
-
     </SafeAreaView>
   )
 }
