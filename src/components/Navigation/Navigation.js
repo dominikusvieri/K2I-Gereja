@@ -20,9 +20,9 @@ const Navigation = () => {
             <Stack.Screen name='Login' component={LoginScreen} options={{headerShown: false}}/>
             <Stack.Screen name='Register' component={RegisterScreen} options={{headerShown: false}}/>
             <Stack.Screen name='BottomNavigation' component={BottomNavigation} options={{headerShown:false}}/>
-            <Stack.Screen name='DetailNews' component={DetailNewsScreen} options={{title:'Berita Terkini'}}/>
-            <Stack.Screen name='DetailEvent' component={DetailEventScreen} options={{title:'Event Terkini'}}/>
-            <Stack.Screen name='EditProfile' component={EditProfileScreen} options={{title: 'Edit Profile'}}/>
+            <Stack.Screen name='DetailNews' component={DetailNewsScreen} options={{title:'Berita Terkini', headerStyle:{backgroundColor:'#0885F8'}, headerTintColor:'#fff', headerTitleStyle:{color:'#fff'}}}/>
+            <Stack.Screen name='DetailEvent' component={DetailEventScreen} options={{title:'Event Terkini', headerStyle:{backgroundColor:'#0885F8'}, headerTintColor:'#fff', headerTitleStyle:{color:'#fff'}}}/>
+            <Stack.Screen name='EditProfile' component={EditProfileScreen} options={{title: 'Edit Profile', headerStyle:{backgroundColor:'#0885F8'}, headerTintColor:'#fff', headerTitleStyle:{color:'#fff'}}}/>
         </Stack.Navigator>
     </NavigationContainer>
   )

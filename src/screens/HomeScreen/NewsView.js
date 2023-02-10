@@ -22,11 +22,6 @@ const NewsView = () => {
       .finally(() => setIsLoading(false))
   }, [])
 
-  console.log(newsData)
-
-
-
-
   return (
     <ScrollView style={styles.main}>
       <Text style={styles.sectionHeader}>

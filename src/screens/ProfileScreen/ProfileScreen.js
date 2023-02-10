@@ -7,8 +7,15 @@ const ProfileScreen = () => {
   return (
     <View style={styles.container}>
       <View style={styles.body}>
-        <View style={styles.avatarContainer}>
-          <Text style={styles.avatar}>RN</Text>
+        <View style={styles.headerStyle}>
+          <View style={{ marginVertical: '10px' }}>
+            <Text style={styles.textHeaderTitle}>
+              Profile
+            </Text>
+            <Text style={styles.textHeaderTitle}>
+              Jemaat Gereja Jemaat Purwodadi
+            </Text>
+          </View>
         </View>
         <View style={styles.nameContainer}>
           <Text style={styles.name}>Your Name</Text>
@@ -29,11 +36,11 @@ const ProfileScreen = () => {
           <Text style={styles.infoLabel}>Portfolio:</Text>
           <Text style={styles.infoText}>https://yourportfolio.com</Text>
         </View>
-        <TouchableOpacity onPress={() => navigation.navigate('EditProfile') }>
+        <TouchableOpacity onPress={() => navigation.navigate('EditProfile')}>
           <Text>Edit</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={()=> navigation.navigate('Login')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Login')}>
           <Text>Logout</Text>
         </TouchableOpacity>
       </View>
@@ -44,10 +51,9 @@ const ProfileScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ECF0F3',
+    backgroundColor: '#fff',
   },
   body: {
-    marginTop: 120,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -91,6 +97,17 @@ const styles = StyleSheet.create({
   },
   infoText: {
     fontSize: 16,
+  },
+  headerStyle: {
+    flexDirection: 'column',
+    paddingHorizontal: '20px',
+    paddingTop: '10px',
+    backgroundColor: '#0885F8'
+  },
+  textHeaderTitle: {
+    fontWeight: '600',
+    color: '#fff',
+    fontSize: '16px'
   },
 });
 
