@@ -8,6 +8,7 @@ import RegisterScreen from '../../screens/Register/RegisterScreen'
 import BottomNavigation from './BottomNavigation'
 import DetailNewsScreen from '../../screens/HomeScreen/DetailNewsScreen'
 import DetailEventScreen from '../../screens/HomeScreen/DetailEventScreen'
+import EditProfileScreen from '../../screens/ProfileScreen/EditProfileScreen'
 
 
 const Stack = createNativeStackNavigator()
@@ -21,6 +22,7 @@ const Navigation = () => {
             <Stack.Screen name='BottomNavigation' component={BottomNavigation} options={{headerShown:false}}/>
             <Stack.Screen name='DetailNews' component={DetailNewsScreen} options={{title:'Berita Terkini'}}/>
             <Stack.Screen name='DetailEvent' component={DetailEventScreen} options={{title:'Event Terkini'}}/>
+            <Stack.Screen name='EditProfile' component={EditProfileScreen} options={{title: 'Edit Profile'}}/>
         </Stack.Navigator>
     </NavigationContainer>
   )
